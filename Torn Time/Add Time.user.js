@@ -12,8 +12,8 @@
 GM_addStyle(`
 	.add-time-display {
         display: flex;
-        justify-content: left;
-        align-items: left;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         font-size: 18px;
         font-weight: bold;
