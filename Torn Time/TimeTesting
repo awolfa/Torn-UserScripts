@@ -1,0 +1,10 @@
+// ==UserScript==
+// @name         Add TwoTimes
+// @namespace    http://tampermonkey.net/
+// @version      0.5
+// @description  Add TCT to all pages
+// @author       Red Rabbit [2203961]
+// @match        https://www.torn.com/*
+// @grant        GM_addStyle
+// Original Code idea came from Mist3rM [2154120] & hannes3510 [2150804].  Special Thanks to xedx helping me fix that damn font size and figure out how to use Github
+// ==/UserScript==
