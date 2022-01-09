@@ -17,7 +17,7 @@ GM_addStyle(`
         width: 100%;
         font-size: 18px;
         font-weight: bold;
-        color: blue;
+        color: red;
 	}
 `)
 
