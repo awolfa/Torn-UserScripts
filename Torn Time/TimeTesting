@@ -6,7 +6,7 @@
 // @author       Red Rabbit [2203961]
 // @match        https://www.torn.com/*
 // @grant        GM_addStyle
-// Special Thanks to xedx for originally helping me with time
+// Special Thanks to xedx for helping me with coding in general
 // ==/UserScript==
 
 GM_addStyle(`
