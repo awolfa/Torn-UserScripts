@@ -16,5 +16,16 @@ GM_addStyle(`
 
 var a = date.toLocaleTimeString('en-US', {timeZone: 'EST'})
 var red = a.add-red-time;
+
 var b = date.toLocaleTimeString('en-US', {timeZone: 'GMT'})
 var blue = b.add-blue-time;
+
+const target = document.createElement('time')
+target.classList.add('header-bottom-text', 'blue "|" red')
+
+document.querySelector('.header-wrapper-bottom').appendChild(target)
+
+const update = () => target.textContent = display()
+
+setInterval(update, 1000)
+update()
