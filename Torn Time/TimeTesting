@@ -6,8 +6,13 @@
 // @author       Red Rabbit [2203961]
 // @match        https://www.torn.com/*
 // @grant        GM_addStyle
-// Original Code idea came from Mist3rM [2154120] & hannes3510 [2150804].  Special Thanks to xedx helping me fix that damn font size and figure out how to use Github
+// Special Thanks to xedx for originally helping me with time
 // ==/UserScript==
 
+GM_addStyle(`
+	.add-red-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 18px; font-weight: bold; color: red;}
+  .add-red-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 18px; font-weight: bold; color: blue;}
+`)
+
 let a = date.toLocaleTimeString('en-US', {timeZone: 'EST'})
-let b = date.toLocaleTimeString('en-US', {timeZone: 'GMT'});
+let b = date.toLocaleTimeString('en-US', {timeZone: 'GMT'})
