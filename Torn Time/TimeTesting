@@ -11,8 +11,10 @@
 
 GM_addStyle(`
 	.add-red-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 18px; font-weight: bold; color: red;}
-  .add-red-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 18px; font-weight: bold; color: blue;}
+  .add-blue-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 18px; font-weight: bold; color: blue;}
 `)
 
-let a = date.toLocaleTimeString('en-US', {timeZone: 'EST'})
-let b = date.toLocaleTimeString('en-US', {timeZone: 'GMT'})
+var a = date.toLocaleTimeString('en-US', {timeZone: 'EST'})
+var red = a.add-red-time;
+var b = date.toLocaleTimeString('en-US', {timeZone: 'GMT'})
+var blue = b.add-blue-time;
