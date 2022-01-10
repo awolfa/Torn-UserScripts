@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Add TwoTimes
+// @name         EST & GMT Time Zone
 // @namespace    http://tampermonkey.net/
 // @version      0.5
 // @description  Add TCT to all pages
@@ -10,8 +10,8 @@
 // ==/UserScript==
 
 GM_addStyle(`
-	.add-red-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 18px; font-weight: bold; color: red;}
-  .add-blue-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 18px; font-weight: bold; color: blue;}
+	.add-red-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 20px; font-weight: bold; color: red;}
+  	.add-blue-time {display: flex; justify-content: center; align-items: center; width: 100%; font-size: 20px; font-weight: bold; color: blue;}
 `)
 
 var a = date.toLocaleTimeString('en-US', {timeZone: 'EST'})
