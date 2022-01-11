@@ -1,0 +1,76 @@
+// ==UserScript==
+// @name         Torn Time Tester
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Show Times Next to Each other
+// @author       xedx [2100735]
+// @include      https://www.torn.com/*
+// @grant        GM_addStyle
+// @grant        GM_xmlhttpRequest
+// @grant        unsafeWindow
+// ==/UserScript==
+
+/*eslint no-unused-vars: 0*/
+/*eslint no-undef: 0*/
+/*eslint no-multi-spaces: 0*/
+
+(function() {
+    'use strict';
+
+     function handlePageLoad() {
+          // Can check for any required DIV here and setTimeout() if not available,
+          // or trigger any required API calls...
+          GM_addStyle(`
+               .my-flex {display: flex;}
+               .add-red-time {text-align: right; width: 100%;
+                              font-size: 20px; font-weight: bold; color: red;}
+               .add-blue-time {text-align: left; width: 100%;
+                               font-size: 20px; font-weight: bold; color: blue;}`
+         );
+
+         // Return the date formatted as EST
+         const format = (date, tz) => date.toLocaleTimeString('en-US', {timeZone: tz});
+         const displayEST = (date = new Date()) => 'EST Time: ' + format(date, 'EST');
+         const displayUTC = (date = new Date()) => 'GMT Time: ' + format(date, 'GMT');
+
+         // Create the 'EST' guy
+         const targetEST = document.createElement('time');
+         targetEST.classList.add('header-bottom-text', 'add-red-time');
+         console.log('targetEST: ', targetEST);
+
+         // Create the 'GMT' guy
+         const targetGMT = document.createElement('time');
+         targetGMT.classList.add('header-bottom-text', 'add-blue-time');
+         console.log('targetGMT: ', targetGMT);
+
+         // Add the wrapper to the existing header, then to that, add the two 'clocks'
+         let sel = document.querySelector('.header-wrapper-bottom');
+         console.log('sel: ', sel);
+         $(sel).append('<div class="my-flex" id="my-wrapper"></div>');
+         $("#my-wrapper").append(targetEST);
+         $("#my-wrapper").append(targetGMT);
+
+         const update = () => {targetEST.textContent = displayEST(); targetGMT.textContent = displayUTC()};
+
+         setInterval(update, 1000);
+         update();
+    }
+
+    //////////////////////////////////////////////////////////////////////
+    // Main.
+    //////////////////////////////////////////////////////////////////////
+
+    logScriptStart();
+    //validateApiKey();
+    //versionCheck();
+
+    // Delay until DOM content load (not full page) complete
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', handlePageLoaded);
+    } else {
+        handlePageLoad();
+    }
+
+    // Could also just call and delay if required stuff not yet present...
+
+})();
