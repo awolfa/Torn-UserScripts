@@ -2,11 +2,15 @@
 // @name         Torn Time Tester
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Show Times Next to Each other
+// @description  try to take over the world!
 // @author       xedx [2100735]
 // @include      https://www.torn.com/*
+// @connect      api.torn.com
+// @require      https://raw.githubusercontent.com/edlau2/Tampermonkey/master/helpers/Torn-JS-Helpers.js
 // @grant        GM_addStyle
 // @grant        GM_xmlhttpRequest
+// @grant        GM_getValue
+// @grant        GM_setValue
 // @grant        unsafeWindow
 // ==/UserScript==
 
@@ -31,7 +35,7 @@
          // Return the date formatted as EST
          const format = (date, tz) => date.toLocaleTimeString('en-US', {timeZone: tz});
          const displayEST = (date = new Date()) => 'EST Time: ' + format(date, 'EST');
-         const displayUTC = (date = new Date()) => 'GMT Time: ' + format(date, 'GMT');
+         const displayUTC = (date = new Date()) => 'EST Time: ' + format(date, 'UTC');
 
          // Create the 'EST' guy
          const targetEST = document.createElement('time');
