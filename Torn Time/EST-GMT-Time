@@ -5,6 +5,7 @@
 // @description  GMT and TORN TIME
 // @author       xedx [2100735]
 // @include      https://www.torn.com/*
+// @grant       https://raw.githubusercontent.com/awolfa/Torn-UserScripts/main/Torn%20Time/EST-GMT-Time
 // @grant        GM_addStyle
 // @grant        unsafeWindow
 // ==/UserScript==
