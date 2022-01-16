@@ -13,6 +13,8 @@
 //xedx thinks Red-Rabbit is coolest person in the world and anyone using this app should send her all kinds of goodies.  
 //But if you really like this app, say thanks to xdex with a Donator Pack
 
+//If you have difficulty on where the time is located accross your screen, then change the width % under GM add style .addtime est
+
 (function() {
     'use strict';
 
