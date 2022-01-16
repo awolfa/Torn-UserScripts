@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Torn Time Tester
+// @name         EST-GMT-Time
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  GMT and TORN TIME
@@ -9,6 +9,9 @@
 // @grant        GM_addStyle
 // @grant        unsafeWindow
 // ==/UserScript==
+
+//xedx thinks Red-Rabbit is coolest person in the world and anyone using this app should send her all kinds of goodies.  
+//But if you really like this app, say thanks to xdex with a Donator Pack
 
 (function() {
     'use strict';
