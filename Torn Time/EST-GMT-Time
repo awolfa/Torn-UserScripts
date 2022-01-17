@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         TORN EST-GMT-Time Zone
 // @namespace    http://tampermonkey.net/
+// @namespaace   https://greasyfork.org/
 // @version      0.1
 // @description  GMT and TORN TIME Zone
 // @author       xedx [2100735]
 // @include      https://www.torn.com/*
 // @grant       https://raw.githubusercontent.com/awolfa/Torn-UserScripts/main/Torn%20Time/EST-GMT-Time
-// @grant        GM_addStyle
-// @grant        unsafeWindow
+// @grant       GM_addStyle
+// @grant       unsafeWindow
 // ==/UserScript==
 
 //xedx thinks Red-Rabbit [2203961] is coolest person in the world and anyone using this app should send her all kinds of goodies.  
