@@ -22,7 +22,7 @@
     GM_addStyle(`
            .my-flex {display: flex;}
            .add-time-est {text-align: right; font-size: 16px; font-weight: bold;
-                          color: blue; margin-left: 100px; width: 40%;}
+                          color: blue; margin-left: 100px; width: 45%;}
            .add-time-gmt {text-align: left; font-size: 16px; font-weight: bold;
                           color: red; margin-left: 25px;}`
     );
