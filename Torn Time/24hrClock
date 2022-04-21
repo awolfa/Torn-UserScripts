@@ -28,11 +28,12 @@
     );
 
     // Functions to return the date formatted as EST/GMT
-    const format = (date, tz) => date.toLocaleTimeString('en-US', {timeZone: tz});
+    const format = (date, tz) => date.toLocaleTimeString('en-US', {hourCycle: 'h23', timeZone: tz});
+    const options = { timeZone: 'Europe/Moscow', hourCycle: 'h23', year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" }
+
     const displayEST = (date = new Date()) => 'EST: ' + format(date, 'EST');
     const displayUTC = (date = new Date()) => 'TCT: ' + format(date, 'GMT');
-
-    // Function called to update the time
+       // Function called to update the time
     const update = () => {targetEST.textContent = displayEST(); targetGMT.textContent = displayUTC()};
 
     // Create the felx wrapper div, the EST span, and GMT span
